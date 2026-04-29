@@ -1,4 +1,4 @@
-FROM python:3.14-slim
+FROM python:3.13-slim
 
 WORKDIR /app
 
@@ -8,7 +8,7 @@ RUN apt-get update \
 
 RUN git clone https://github.com/MariaDB/mcp.git .
 
-RUN pip install --no-cache-dir \
+RUN pip install --no-cache-dir -v \
     "asyncmy>=0.2.10" \
     "fastmcp[websockets]==2.12.1" \
     "python-dotenv>=1.1.0" \
